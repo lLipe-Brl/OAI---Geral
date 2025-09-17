@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Beneficiários</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Formulário de Cadastro de Beneficiário</h1>
+
+    <form id="beneficiary-form">
+        <h2>Dados do Responsável</h2>
+        <label for="guardianName">Nome do Responsável:</label>
+        <input type="text" id="guardianName" required>
+
+        <label for="guardianCpf">CPF do Responsável:</label>
+        <input type="text" id="guardianCpf" required>
+
+        <label for="guardianRg">RG do Responsável:</label>
+        <input type="text" id="guardianRg" required>
+        
+        <label for="contactPhone">Telefone de Contato:</label>
+        <input type="tel" id="contactPhone" required>
+
+        <h2>Dados de um Menor</h2>
+        <label for="minorName">Nome do Menor:</label>
+        <input type="text" id="minorName" required>
+
+        <label for="minorAge">Idade do Menor:</label>
+        <input type="number" id="minorAge">
+
+        <h2>Documento</h2>
+        <label for="documentImage">Imagem do Documento:</label>
+        <input type="file" id="documentImage" accept="image/*" required>
+        
+        <button type="submit">Salvar Beneficiário</button>
+    </form>
+    
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/browser-image-compression@2.0.1/dist/browser-image-compression.js"></script>
+
+    <script src="main.js"></script>
+</body>
+</html>
